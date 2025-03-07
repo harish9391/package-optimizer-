@@ -1,0 +1,351 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: lightskyblue;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    width: 70px;
+    margin-right: 20px;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.video-container {
+    width: 100vw;  /* Full width of viewport */
+    height: 100vh; /* Full height of viewport */
+    position: relative;
+    overflow: hidden;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire section without distortion */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#about {
+    text-align: center;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.about-box {
+    width: 30%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.about-box.center {
+    width: 35%;
+    height: 350px;
+}
+
+.about-box.center video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.about-info {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+#special-deals {
+    text-align: center;
+    padding: 20px;
+    background: #f8f8f8;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.deals-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px;
+    scroll-snap-type: x mandatory;
+}
+
+.deal-card {
+    min-width: 270px;
+    width: 350px;
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    scroll-snap-align: start;
+}
+
+.deal-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.deal-card p {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.deal-card strong {
+    display: block;
+    font-size: 1.1rem;
+    color: #333;
+    margin-top: 5px;
+}
+
+.contact-section {
+    background: url('nature-3807916.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: white;
+    color: black;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-info, .contact-details, .contact-form {
+    flex: 1;
+    padding: 20px;
+    min-width: 250px;
+}
+
+h3 {
+    margin-bottom: 15px;
+}
+
+.contact-details p, .contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    height: 80px;
+}
+
+button {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: darkorange;
+}
+
+.package-deals {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+.package {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: 30%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    cursor: pointer;
+}
+.package img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.package h3 {
+    margin-top: 0;
+}
+.package p {
+    color: #555;
+}
+.package .price {
+    font-size: 1.5em;
+    color: #e67e22;
+    font-weight: bold;
+}
+.package-detail {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 1000;
+    width: 80%;
+    max-width: 600px;
+}
+.package-detail img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.package-detail h2 {
+    margin-top: 0;
+}
+.package-detail p {
+    color: #555;
+}
+.package-detail .price {
+    font-size: 1.5em;
+    color: #e67e22;
+    font-weight: bold;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 999;
+}
+.book-button {
+    background-color: #e67e22;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+.book-button:hover {
+    background-color: #d35400;
+}
+#head {
+    text-align: center; /* Horizontally center the text */
+    color: #e67e22; /* Orange color */
+    font-size: 2.5em; /* Larger font size */
+    margin: 20px 0; /* Add some margin above and below */
+    padding: 10px; /* Add padding for better spacing */
+    background-color: #f9f9f9; /* Light background color */
+    border-bottom: 2px solid #ddd; /* Add a subtle border below */
+    border-radius: 10px;
+}
+#detailInclusions {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+    margin: 10px 0;
+}
+
+#detailInclusions li {
+    background-color: #f1f1f1;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 4px;
+}

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hyderbad travells</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="bus logo.jpg" alt="Habeeba Travels Logo" id="logo">
+            <h1>Hyderbad Travels</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section with Video Background -->
+    <section id="home">
+        <div class="video-container">
+            <video autoplay loop muted>
+                <source src="taj.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+    </section>
+    <section id="about">
+        <h2>About Us</h2>
+        <div class="about-container">
+            <div class="about-box left">
+                <img src="himalya.jpg" alt="Left Image">
+            </div>
+            <div class="about-box center">
+                <video autoplay loop muted>
+                    <source src="about3.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+            </div>
+            <div class="about-box right">
+                <img src="right.jpg" alt="Right Image">
+            </div>
+        </div>
+        <div class="about-info">
+            <p>We offer amazing travel experiences with comfort and safety. Explore world with us!</p>
+        </div>
+    </section>
+    <h1 id="head">Special Package Deals</h1>
+    <section class="package-deals">
+        
+        <div class="package" id="destinations" onclick="openDetail('Bali')">
+            <img src="bali.jpg" alt="Auburn">
+            <h3>Bali</h3>
+            <p>Violidays</p>
+            <p class="price">Starting from INR 23,358</p>
+        </div>
+        <div class="package" onclick="openDetail('Barcelonak')">
+            <img src="Barcelonak.webp" alt="ATLAS">
+            <h3>Barcelona</h3>
+            <p>vibrant capital of Catalonia</p>
+            <p class="price">Starting from INR 23,173</p>
+        </div>
+        <div class="package" onclick="openDetail('Lakshadweep')">
+            <img src="laksh.cms" alt="Jediah Stopover">
+            <h3>Lakshadweep</h3>
+            <p>lands, beaches, and lighthouses.</p>
+            <p class="price">Starting from INR 20,599</p>
+        </div>
+        <div class="package" onclick="openDetail('Havelock')">
+            <img src="Havelock Island.webp" alt="Riyadh City Break">
+            <h3>Havelock Island</h3>
+            <p>India’s Andaman Islands</p>
+            <p class="price">Starting from INR 20,599</p>
+        </div>
+    </section>
+    
+    <div class="overlay" id="overlay"></div>
+    
+    <div class="package-detail" id="packageDetail">
+        <img id="detailImage" src="" alt="Package Image">
+        <h2 id="detailTitle"></h2>
+        <p id="detailDescription"></p>
+        <p class="price" id="detailPrice"></p>
+        <p id="detailDuration"></p> <!-- Added for duration -->
+        <ul id="detailInclusions"></ul> <!-- Added for inclusions -->
+        <button class="book-button" onclick="redirectToBookingForm()">Book Now</button>
+    </div>
+    
+    <script>
+        function openDetail(packageName) {
+            const detail = document.getElementById('packageDetail');
+            const overlay = document.getElementById('overlay');
+            const image = document.getElementById('detailImage');
+            const title = document.getElementById('detailTitle');
+            const description = document.getElementById('detailDescription');
+            const price = document.getElementById('detailPrice');
+            const duration = document.getElementById('detailDuration');
+            const inclusions = document.getElementById('detailInclusions');
+        
+            let images = [];
+            let currentImageIndex = 0;
+        
+            // Set details based on the package clicked
+            switch (packageName) {
+                case 'Bali':
+                    images = [
+                        'bali.jpg',
+                        'Ramoji .jpg',
+                        'right.jpg'
+                    ];
+                    title.innerText = 'Bali';
+                    description.innerText = 'Violidays';
+                    price.innerText = 'Starting from INR 23,358';
+                    duration.innerText = '2N & 3D';
+                    inclusions.innerHTML = '<li>Hotel</li><li>Sightseeing</li><li>Transfer</li>';
+                    break;
+                case 'Barcelonak':
+                    images = [
+                        'b1.jpeg',
+                        'b2.jpeg',
+                        'b3.jpeg'
+                    ];
+                    title.innerText = 'ATLAS';
+                    description.innerText = 'TODAY FINANCIAL WITH THE dearthip';
+                    price.innerText = 'Starting from INR 23,173';
+                    duration.innerText = '2N & 3D';
+                    inclusions.innerHTML = '<li>Hotel</li><li>Sightseeing</li><li>Transfer</li>';
+                    break;
+                case 'Lakshadweep':
+                    images = [
+                        'l1.jpeg',
+                        'l2.jpeg',
+                        'l3.jpeg'
+                    ];
+                    title.innerText = 'Jediah Stopover';
+                    description.innerText = 'Discover Jediah';
+                    price.innerText = 'Starting from INR 20,599';
+                    duration.innerText = '2N & 3D';
+                    inclusions.innerHTML = '<li>Hotel</li><li>Sightseeing</li><li>Transfer</li>';
+                    break;
+                case 'Havelock':
+                    images = [
+                        'h1.jpeg',
+                        'h2.jpeg',
+                        'h3.jpeg'
+                    ];
+                    title.innerText = 'Riyadh City break';
+                    description.innerText = 'Jediah City Package';
+                    price.innerText = 'Starting from INR 20,599';
+                    duration.innerText = '2N & 3D';
+                    inclusions.innerHTML = '<li>Hotel</li><li>Sightseeing</li><li>Transfer</li>';
+                    break;
+            }
+        
+            // Set the first image
+            image.src = images[currentImageIndex];
+        
+            // Change image every 2 seconds
+            const interval = setInterval(() => {
+                currentImageIndex = (currentImageIndex + 1) % images.length; // Cycle through images
+                image.src = images[currentImageIndex];
+            }, 2000); // Change image every 2 seconds
+        
+            // Clear interval when the detail view is closed
+            overlay.addEventListener('click', () => {
+                clearInterval(interval);
+            });
+        
+            detail.style.display = 'block';
+            overlay.style.display = 'block';
+        }
+        function bookPackage() {
+            alert('Package booked successfully!');
+            closeDetail();
+        }
+    
+        function closeDetail() {
+            const detail = document.getElementById('packageDetail');
+            const overlay = document.getElementById('overlay');
+            detail.style.display = 'none';
+            overlay.style.display = 'none';
+        }
+        function redirectToBookingForm() {
+            // Replace 'booking-form.html' with the actual URL of your booking form page
+            window.location.href = 'form.html';
+        }
+    
+        // Close detail when clicking outside
+        document.getElementById('overlay').addEventListener('click', closeDetail);
+    </script>
+
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2>LET'S KEEP IN TOUCH <br> <strong>CONTACT US</strong></h2>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>CONTACT AGENCY</h3>
+                    <p>There are many variations of passages of Lorem Ipsum available...</p>
+                </div>
+
+                <div class="contact-details">
+                    <h3>OUR CONTACTS</h3>
+                    <p><strong>Address:</strong> 120 E 87th Street, New York</p>
+                    <p><strong>Phone:</strong> <a href="tel:+18009178998">1-800-917-8918</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:info@domainname.com">info@domainname.com</a></p>
+                </div>
+
+                <div class="contact-form">
+                    <h3>ANY QUESTIONS?</h3>
+                    <form action="#" method="POST">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <textarea name="message" placeholder="Message" required></textarea>
+                        <button type="submit">SEND MESSAGE</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
