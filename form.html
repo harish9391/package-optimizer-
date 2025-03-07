@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        header .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        header .logo img {
+            width: 70px;
+            margin-right: 20px;
+        }
+        
+        header h1 {
+            font-size: 2rem;
+        }
+        
+        nav ul {
+            list-style: none;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        .booking-form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .booking-form h2 {
+            text-align: center;
+            color: #e67e22;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .form-group input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+        }
+        .form-group .inline-fields {
+            display: flex;
+            gap: 10px;
+        }
+        .form-group .inline-fields input {
+            flex: 1;
+        }
+        .form-group textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        .form-group button {
+            background-color: #e67e22;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .form-group button:hover {
+            background-color: #d35400;
+        }
+        .package button {
+            background-color: #e67e22;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .package button:hover {
+            background-color: #d35400;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="bus logo.jpg" alt="Habeeba Travels Logo" id="logo">
+            <h1>Hyderbad Travels</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="home.html">About Us</a></li>
+                <li><a href="home.html">Destinations</a></li>
+                <li><a href="home.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="booking-form">
+        <h2>Booking Form</h2>
+        <form id="bookingForm">
+            <!-- Traveler Information -->
+            <div class="form-group">
+                <label>Full Name</label>
+                <div class="inline-fields">
+                    <input type="text" placeholder="First Name" required>
+                    <input type="text" placeholder="Last Name" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" placeholder="Enter your phone number" required>
+            </div>
+            <div class="form-group">
+                <label>Date of Birth</label>
+                <input type="date" required>
+            </div>
+            <div class="form-group">
+                <label>Nationality</label>
+                <input type="text" placeholder="Enter your nationality" required>
+            </div>
+
+            <!-- Travel Details -->
+            <div class="form-group">
+                <label>Destination</label>
+                <select required>
+                    <option value="">Select Destination</option>
+                    <option value="Auburn">Auburn</option>
+                    <option value="ATLAS">ATLAS</option>
+                    <option value="Jediah Stopover">Jediah Stopover</option>
+                    <option value="Riyadh City Break">Riyadh City Break</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Departure Date</label>
+                <input type="date" required>
+            </div>
+            <div class="form-group">
+                <label>Return Date</label>
+                <input type="date">
+            </div>
+            <div class="form-group">
+                <label>Number of Travelers</label>
+                <div class="inline-fields">
+                    <input type="number" placeholder="Adults" min="1" required>
+                    <input type="number" placeholder="Children" min="0">
+                    <input type="number" placeholder="Infants" min="0">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Preferred Mode of Transport</label>
+                <select required>
+                    <option value="">Select Transport</option>
+                    <option value="Flight">Flight</option>
+                    <option value="Train">Train</option>
+                    <option value="Bus">Bus</option>
+                    <option value="Private Car">Private Car</option>
+                </select>
+            </div>
+
+            <!-- Accommodation Preferences -->
+            <div class="form-group">
+                <label>Hotel Type</label>
+                <select required>
+                    <option value="">Select Hotel Type</option>
+                    <option value="Luxury">Luxury</option>
+                    <option value="Standard">Standard</option>
+                    <option value="Budget">Budget</option>
+                    <option value="No Accommodation">No Accommodation</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Room Type</label>
+                <select required>
+                    <option value="">Select Room Type</option>
+                    <option value="Single">Single</option>
+                    <option value="Double">Double</option>
+                    <option value="Family">Family</option>
+                    <option value="Suite">Suite</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Special Requests</label>
+                <textarea placeholder="Enter any special requests"></textarea>
+            </div>
+
+            <!-- Additional Services -->
+            <div class="form-group">
+                <label>Additional Services</label>
+                <div>
+                    <input type="checkbox" id="airportPickup">
+                    <label for="airportPickup">Airport Pickup/Drop-off</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="travelInsurance">
+                    <label for="travelInsurance">Travel Insurance</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="tourPackages">
+                    <label for="tourPackages">Tour Packages/Activities</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="mealPreferences">
+                    <label for="mealPreferences">Meal Preferences</label>
+                </div>
+            </div>
+
+            <!-- Payment Details -->
+            <div class="form-group">
+                <label>Payment Method</label>
+                <select required>
+                    <option value="">Select Payment Method</option>
+                    <option value="Credit/Debit Card">Credit/Debit Card</option>
+                    <option value="PayPal">PayPal</option>
+                    <option value="UPI">UPI</option>
+                    <option value="Net Banking">Net Banking</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Billing Address</label>
+                <textarea placeholder="Enter your billing address" required></textarea>
+            </div>
+            <div class="form-group">
+                <label>Promo Code (if any)</label>
+                <input type="text" placeholder="Enter promo code">
+            </div>
+
+            <!-- Terms & Conditions -->
+            <div class="form-group">
+                <div>
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">I agree to the Terms & Conditions</label>
+                </div>
+            </div>
+
+            <!-- Confirm Booking Button -->
+            <div class="form-group" id="bookingForm">
+                <button type="submit">Confirm Booking</button>
+            </div>
+            <div class="package" onclick="redirectToBookingForm()">
+                <button type="submit">Optimize your backpack</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+        
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData.entries());
+        
+            try {
+                const response = await fetch('http://localhost:5000/submit-booking', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                });
+        
+                const result = await response.json();
+                if (response.ok) {
+                    alert('Booking saved successfully!');
+                } else {
+                    alert('Failed to save booking: ' + result.error);
+                }
+            } catch (err) {
+                console.error('Error submitting form:', err);
+                alert('An error occurred. Please try again.');
+            }
+        });
+        function redirectToBookingForm() {
+            // Redirect to the booking form page
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
